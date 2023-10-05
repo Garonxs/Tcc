@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 150px;
+      background-color: #FFA500;
+      padding: 50px;
+      border-radius: 30px;
+    }
+    
+    .container h2 {
+      text-align: center;
+      color: black;
+    }
+    
+    .container label {
+      display: block;
+      margin-bottom: 5px;
+      color: black;
+    }
+    
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: none;
+    }
+    
+    .container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .container .message {
+      margin-top: 10px;
+      text-align: center;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" required>
+      
+      <label for="password">Senha:</label>
+      <input type="password" id="password" required>
+      
+      <input type="submit" value="Entrar">
+    </form>
+    <p class="message">Esqueceu a senha? <a href="#" id="forgot-link">Redefinir senha</a></p>
+    <p class="message">Ainda não tem uma conta? <a href="#" id="register-link">Registrar</a></p>
+  </div>
+  
+  <div id="forgot-password" class="container" style="display: none;">
+    <h2>Redefinir Senha</h2>
+    <form id="reset-form">
+      <label for="email">Email:</label>
+      <input type="text" id="email" required>
+      
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+  
+  <div id="register" class="container" style="display: none;">
+    <h2>Registrar</h2>
+    <form id="register-form">
+      <label for="new-username">Novo Usuário:</label>
+      <input type="text" id="new-username" required>
+      
+      <label for="new-password">Nova Senha:</label>
+      <input type="password" id="new-password" required>
+      
+      <input type="submit" value="Registrar">
+    </form>
+  </div>
+  
+  <script>
+    document.getElementById('forgot-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('forgot-password').style.display = 'block';
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('register').style.display = 'none';
+    });
+    
+    document.getElementById('register-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('register').style.display = 'block';
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('forgot-password').style.display = 'none';
+    });
+    
+    document.getElementById('reset-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = document.getElementById('email').value;
+      alert('Um link para redefinir a senha foi enviado para o email: ' + email);
+      document.getElementById('forgot-password').style.display = 'none';
+      document.getElementById('login-form').style.display = 'block';
+    });
+    
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var newUsername = document.getElementById('new-username').value;
+      alert('Registrado com sucesso! Novo usuário: ' + newUsername);
+      document.getElementById('register').style.display = 'none';
+      document.getElementById('login-form').style.display = 'block';
+    });
+
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      
+      if (username === 'admin' && password === '12345') {
+        alert('Login bem-sucedido! Bem-vindo, ' + username + '!');
+      } else {
+        alert('Usuário ou senha inválidos. Tente novamente.');
+      }
+    });
+  </script>
+</body>
+</html>

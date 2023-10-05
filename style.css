@@ -1,0 +1,119 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: orange;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section.hero {
+    background-image: url("hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    width: 80%;
+}
+
+.hero-content h2 {
+    color: orange;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section.services {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    margin: 15px;
+}
+
+.services h3 {
+    color: orange;
+    font-size: 28px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+.service h4 {
+    color: orange;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer p {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+}
+
