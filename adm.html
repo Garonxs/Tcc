@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: orange;
+            text-align: center;
+            padding: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid orange;
+            text-align: left;
+        }
+
+        th {
+            background-color: orange;
+            color: black;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 165, 0, 0.2);
+        }
+
+        tr:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .logout-button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logout-button a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        .logout-button a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Painel do Administrador</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Categoria</th>
+                <th>Assunto</th>
+                <th>Mensagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Substitua os dados abaixo com os dados reais dos tickets -->
+            <tr>
+                <td>1</td>
+                <td>Nome do Usuário 1</td>
+                <td>usuario1@email.com</td>
+                <td>Problemas Técnicos</td>
+                <td>Assunto do Ticket 1</td>
+                <td>Mensagem do Ticket 1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nome do Usuário 2</td>
+                <td>usuario2@email.com</td>
+                <td>Dúvidas</td>
+                <td>Assunto do Ticket 2</td>
+                <td>Mensagem do Ticket 2</td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+    </table>
+
+    <div class="logout-button">
+        <a href="logout.php">Sair</a>
+    </div>
+</body>
+</html>
