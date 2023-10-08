@@ -1,0 +1,73 @@
+body {
+    background-color: black;
+    color: orange;
+    font-family: Arial, sans-serif;
+    position: relative; /* Para posicionar o botão de "Página Inicial" */
+}
+
+header {
+    text-align: center;
+    color: black;
+    padding: 20px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between; /* Alinhar elementos no cabeçalho */
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+#pagina-inicial {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: black;
+    border-radius: 5px;
+    margin-right: 20px; /* Espaço à direita para afastar do canto */
+}
+
+#pagina-inicial:hover {
+    background-color: orange;
+}
+
+main {
+    padding: 20px;
+}
+
+#informacoes {
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid orange;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#editar {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#editar:hover {
+    background-color: darkorange;
+}
