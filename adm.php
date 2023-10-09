@@ -1,5 +1,11 @@
 <?php
 require_once "config\Conecao.php";
+
+    if (!isset($_COOKIE["usuario_logado"]) || $_COOKIE["usuario_logado"] !== "true" || $_COOKIE["tipousuario"] != "ADMIN") {
+    header("Location: index.html");
+    exit;
+    }
+
     $pdo = new Conecao("root", "");
     $pdo = $pdo->criarConexao();
     $sql = "SELECT * FROM ticket";
@@ -123,7 +129,7 @@ require_once "config\Conecao.php";
 </table>
 
 <div class="logout-button">
-    <a href="logout.php">Sair</a>
+    <a href="validacao\logout.php">Sair</a>
 </div>
 </body>
 </html>

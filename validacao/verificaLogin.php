@@ -17,11 +17,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        $idusuario = $result["id_usuario"];
 
         if ($result !== false) {
             if($result["tipousuario"] == "ADMIN"){
+                setcookie("usuario_logado", "true", [
+                    "path" => "/",
+                ]);
                 header("Location: ..\\adm.php");
             }
+
+            if($result["tipousuario"] == "CLIENTE"){
+                setcookie("usuario_logado", "true", [
+                    "path" => "/",
+                ]);
+
+                setcookie("idusuario", "$idusuario", [
+                    "path" => "/",
+                ]);
+
+                header("Location: ..\\perfil.php");
+            }
+
         } else {
             echo 'Usuário ou senha inválidos. Tente novamente.';
         }
